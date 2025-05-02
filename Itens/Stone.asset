@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf75a4cbd5c8b84f9eb74523ba5e251, type: 3}
+  m_Name: Stone
+  m_EditorClassIdentifier: 
+  itemType: 4
+  itemCategory: 0
+  itemName: Pedra
+  itemSprite: {fileID: 21300000, guid: 509b0465cb1515e41b7a669c0787988b, type: 3}
+  itemDescription: "Lasca de pedra usada para constru\xE7\xE3o"
+  itemBenefict: Usado para construir
+  hitAmount: 3
+  lootAmount: 2
+  lootPrefab: {fileID: 2001928706525000709, guid: 4eec142c3dd7936419b8f474109230b1, type: 3}
