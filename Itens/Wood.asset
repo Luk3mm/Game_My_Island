@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf75a4cbd5c8b84f9eb74523ba5e251, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: 
+  itemType: 0
+  itemCategory: 0
+  itemName: Madeira
+  itemSprite: {fileID: 21300000, guid: 2855fc50cdd8b7140add70d4f77e970c, type: 3}
+  itemDescription: Madeira boa, tirada de uma arvore especial
+  itemBenefict: 
+  hitAmount: 5
+  lootAmount: 2
+  lifeAmount: 0
+  energyAmount: 0
+  isRecoveryEnergy: 0
+  isRecoveryLife: 0
+  lootPrefab: {fileID: 8500930629791228661, guid: 29d079c64a775b84ab4adcfa5112ad4c, type: 3}
