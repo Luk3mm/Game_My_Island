@@ -3074,8 +3074,9 @@ GameObject:
   m_Component:
   - component: {fileID: 518311658}
   - component: {fileID: 518311657}
+  - component: {fileID: 518311659}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Main Island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3111,6 +3112,26 @@ Transform:
   - {fileID: 1968638433}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518311659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518311656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea425081d59035647a541492463aabd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceLV1:
+  - resource: {fileID: 518248996892617004, guid: 85c3aff8c4c64a742868bf667b9d9f2f, type: 3}
+    amount: 5
+  - resource: {fileID: 5177214731289728198, guid: f0979c29b2e18564dadebbcc63c100fe, type: 3}
+    amount: 2
+  - resource: {fileID: 2741590049235021537, guid: cda7ced80c7291f449c04838a614e70e, type: 3}
+    amount: 1
+  resourceIsland: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -18076,7 +18097,7 @@ GameObject:
   - component: {fileID: 1179223954}
   - component: {fileID: 1179223953}
   m_Layer: 5
-  m_Name: Main Island
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

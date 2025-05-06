@@ -1,6 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+[Serializable]
+public struct ResourceLoot
+{
+    public GameObject resource;
+    public int amount;
+}
 
 public class GameManager : MonoBehaviour
 {
