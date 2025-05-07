@@ -6,6 +6,7 @@ public class Mine : MonoBehaviour
 {
     private int hitAmount;
     public Item item;
+    public IslandSlotGrid slot;
 
     // Start is called before the first frame update
     void Start()
@@ -13,10 +14,10 @@ public class Mine : MonoBehaviour
         hitAmount = item.hitAmount;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSlot(IslandSlotGrid s)
     {
-        
+        slot = s;
+        transform.position = slot.transform.position;
     }
 
     private void OnMouseOver()
@@ -36,6 +37,7 @@ public class Mine : MonoBehaviour
         if (hitAmount <= 0)
         {
             CoreGame.instance.gameManager.Loot(item, transform.position);
+            slot.Busy(false);
             Destroy(this.gameObject);
         }
     }
