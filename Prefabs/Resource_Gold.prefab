@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4111357188366292373}
   - component: {fileID: 3514021324079142622}
   - component: {fileID: 8676918945970882474}
+  - component: {fileID: -9057362387333188962}
   m_Layer: 0
   m_Name: Resource_Gold
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 3452e9cb7efd8a1479dee4aaca880d74, type: 2}
+  slot: {fileID: 0}
 --- !u!61 &8676918945970882474
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +146,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.03013, y: 0.98987144}
   m_EdgeRadius: 0
+--- !u!114 &-9057362387333188962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171484905017500443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5440d0e07b98c1e45a1f77443ee9b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

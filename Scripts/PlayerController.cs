@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
 
+    public float positionY;
+
     private bool isWalk;
     private bool isLookLeft;
     private bool isAction;
@@ -79,6 +81,11 @@ public class PlayerController : MonoBehaviour
         }
         
         animController.SetBool("walk", isWalk);
+    }
+
+    private void LateUpdate()
+    {
+        positionY = transform.position.y;
     }
 
     void Flip()

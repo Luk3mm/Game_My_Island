@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4439380105383355385}
   - component: {fileID: 8158988067427874426}
   - component: {fileID: 3318451177367842704}
+  - component: {fileID: -7154055148112164549}
   m_Layer: 0
   m_Name: Resource_Wood
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 1bb4b3daa85154542bc0dcfcca8d5885, type: 2}
+  slot: {fileID: 0}
 --- !u!61 &3318451177367842704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,7 +133,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027592301, y: 0.64059687}
+  m_Offset: {x: -0.027592301, y: 0.41989696}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.1}
@@ -142,5 +144,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.72807765, y: 1.4008741}
+  m_Size: {x: 0.72807765, y: 1.0654104}
   m_EdgeRadius: 0
+--- !u!114 &-7154055148112164549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518248996892617004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5440d0e07b98c1e45a1f77443ee9b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offSet: 0

@@ -6,6 +6,7 @@ public class Mine : MonoBehaviour
 {
     private int hitAmount;
     public Item item;
+
     public IslandSlotGrid slot;
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class Mine : MonoBehaviour
     {
         slot = s;
         transform.position = slot.transform.position;
+        GetComponent<SpriteRenderer>().sortingOrder = s.line;
     }
 
     private void OnMouseOver()

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4872995686815939112}
   - component: {fileID: 7297780037894504826}
   - component: {fileID: 3935224714108877574}
+  - component: {fileID: -4760788095976664365}
   m_Layer: 0
   m_Name: Resource_Sheep
   m_TagString: Untagged
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 48d1f897c10efce4684828d4f12cbce5, type: 2}
+  slot: {fileID: 0}
 --- !u!95 &7297780037894504826
 Animator:
   serializedVersion: 5
@@ -166,3 +168,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6412585, y: 0.49410677}
   m_EdgeRadius: 0
+--- !u!114 &-4760788095976664365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208562215880397650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5440d0e07b98c1e45a1f77443ee9b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

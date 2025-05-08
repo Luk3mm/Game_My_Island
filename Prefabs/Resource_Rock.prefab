@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4681038302568323316}
   - component: {fileID: 2427702014835861466}
   - component: {fileID: 5031497872086768222}
+  - component: {fileID: -1023596372776031957}
   m_Layer: 0
   m_Name: Resource_Rock
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: ea547dc8754dd47488847c5a5a86b51e, type: 2}
+  slot: {fileID: 0}
 --- !u!61 &5031497872086768222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +146,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5829873, y: 0.4671504}
   m_EdgeRadius: 0
+--- !u!114 &-1023596372776031957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177214731289728198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5440d0e07b98c1e45a1f77443ee9b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

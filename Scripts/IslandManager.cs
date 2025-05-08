@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class IslandManager : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class IslandManager : MonoBehaviour
                 NewResource();
             }
         }
+
+        StartCoroutine(SpawnResources());
     }
 
     private void NewResource()
@@ -34,16 +37,52 @@ public class IslandManager : MonoBehaviour
 
         if(s.isBusy == false)
         {
-            int idResource = Random.Range(0, dataBase.resourceIsland.Count);
+            if (CoreGame.instance.gameManager.PlayerDistance(s.transform.position) == true)
+            {
+                int idResource = Random.Range(0, dataBase.resourceIsland.Count);
 
-            GameObject resource = Instantiate(dataBase.resourceIsland[idResource]);
+                GameObject resource = Instantiate(dataBase.resourceIsland[idResource]);
 
-            resource.GetComponent<Mine>().SetSlot(s);
-            s.Busy(true);
+                resource.GetComponent<Mine>().SetSlot(s);
+                s.Busy(true);
+            }
+            else
+            {
+                NewResource();
+            }
+
         }
         else if(s.isBusy == true)
         {
             NewResource();
+        }
+    }
+
+    IEnumerator SpawnResources()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(CoreGame.instance.gameManager.timeToSpawnResource);
+
+            int count = slot.Where(x => x.isBusy == true).Count();
+            if(count < maxResources)
+            {
+                NewResource();
+            }
+
+            /*int isBusy = 0;
+            foreach(IslandSlotGrid s in slot)
+            {
+                if(s.isBusy == true)
+                {
+                    isBusy++;
+                }
+            }
+
+            if(isBusy < maxResources)
+            {
+                NewResource();
+            }*/
         }
     }
 }
