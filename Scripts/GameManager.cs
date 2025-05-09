@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int playerLifeMax;
     public int playerEnergy;
     public int playerEnergyMax;
+    public int playerLevel;
     public float distanceToSpawnResource;
     public float timeToSpawnResource;
 
