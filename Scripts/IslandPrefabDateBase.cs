@@ -6,48 +6,57 @@ public class IslandPrefabDateBase : MonoBehaviour
 {
     public ResourceLoot[] resourceLV1;
     public ResourceLoot[] resourceLv2;
+    public ResourceLoot[] resourceLv3;
     public ResourceLoot[] resourceLv4;
+    public ResourceLoot[] resourceLv5;
+
+    public int[] levelUpgrade;
+
     public List<GameObject> resourceIsland = new List<GameObject>();
 
     public void CreateIslandResources()
     {
         resourceIsland.Clear();
 
-        if (resourceLV1.Length > 0)
+        for(int i = 0; i < levelUpgrade.Length; i++)
         {
-            foreach(ResourceLoot l in resourceLV1)
+            if(CoreGame.instance.gameManager.playerLevel >= levelUpgrade[i])
+            {
+                switch (i)
+                {
+                    case 0:
+                        ResourceLevel(resourceLV1);
+                        break;
+
+                    case 1:
+                        ResourceLevel(resourceLv2);
+                        break;
+
+                    case 2:
+                        ResourceLevel(resourceLv3);
+                        break;
+
+                    case 3:
+                        ResourceLevel(resourceLv4);
+                        break;
+
+                    case 4:
+                        ResourceLevel(resourceLv5);
+                        break;
+                }
+            }
+        }
+    }
+
+    public void ResourceLevel(ResourceLoot[] res)
+    {
+        if(res.Length > 0)
+        {
+            foreach(ResourceLoot l in res)
             {
                 for(int i = 0; i < l.amount; i++)
                 {
                     resourceIsland.Add(l.resource);
-                }
-            }
-        }
-
-        if(CoreGame.instance.gameManager.playerLevel >= 2)
-        {
-            if(resourceLv2.Length > 0)
-            {
-                foreach(ResourceLoot l in resourceLv2)
-                {
-                    for (int i = 0; i < l.amount; i++)
-                    {
-                        resourceIsland.Add(l.resource);
-                    }
-                }
-            }
-        }
-
-        if (CoreGame.instance.gameManager.playerLevel >= 4)
-        {
-            if (resourceLv4.Length > 0)
-            {
-                foreach (ResourceLoot l in resourceLv4)
-                {
-                    for (int i = 0; i < l.amount; i++)
-                    {
-                        resourceIsland.Add(l.resource);
-                    }
                 }
             }
         }
