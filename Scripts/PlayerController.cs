@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -81,6 +82,11 @@ public class PlayerController : MonoBehaviour
         }
         
         animController.SetBool("walk", isWalk);
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void LateUpdate()

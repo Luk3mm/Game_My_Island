@@ -14,7 +14,7 @@ public enum ItemCategory
 
 public enum GameState
 {
-    GAMEPLAY, INVENTORY
+    GAMEPLAY, INVENTORY, CRAFT
 }
 
 public class CoreGame : MonoBehaviour

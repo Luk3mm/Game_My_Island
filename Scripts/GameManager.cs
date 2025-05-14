@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
 
     public GameObject actionCursor;
+    public GameObject objCraft;
+
 
     private GameObject interactiveObj;
 
@@ -150,6 +152,9 @@ public class GameManager : MonoBehaviour
                 interactiveObj = null;
                 actionCursor.SetActive(false);
                 break;
+
+            case GameState.CRAFT:
+                break;
         }
     }
 
@@ -158,5 +163,15 @@ public class GameManager : MonoBehaviour
         float distance = Vector3.Distance(CoreGame.instance.playerController.transform.position, position);
         bool isReady = distance >= distanceToSpawnResource;
         return isReady;
+    }
+
+    public void SetCraftObject(IslandSlotGrid slot)
+    {
+        GameObject obj = Instantiate(objCraft);
+        obj.transform.position = slot.transform.position;
+        slot.isBusy = true;
+        slot.ShowIcon(false);
+
+        ChangeGameState(GameState.GAMEPLAY);
     }
 }

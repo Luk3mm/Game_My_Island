@@ -17809,6 +17809,7 @@ MonoBehaviour:
   distanceToSpawnResource: 2
   timeToSpawnResource: 5
   actionCursor: {fileID: 1636827223}
+  objCraft: {fileID: 8354776009137681580, guid: b8cdd658196eb9b46b4273abb36eb7c2, type: 3}
 --- !u!114 &1121946563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27151,6 +27152,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
   m_PrefabInstance: {fileID: 2129699054}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1060230185763356599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 804926490439841301, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_Name
+      value: IslandSlotGrid
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732676667535479097, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: spriteRender
+      value: 
+      objectReference: {fileID: 1060230185763356600}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.502
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03742701
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827925400728912788, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+--- !u!212 &1060230185763356600 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4203422361738526708, guid: 023e6093846dccf4abfb6cc67c343421, type: 3}
+  m_PrefabInstance: {fileID: 1060230185763356599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -27162,3 +27229,4 @@ SceneRoots:
   - {fileID: 1121946561}
   - {fileID: 1179223956}
   - {fileID: 914948631}
+  - {fileID: 1060230185763356599}

@@ -69,20 +69,29 @@ public class IslandManager : MonoBehaviour
             {
                 NewResource();
             }
-
-            /*int isBusy = 0;
-            foreach(IslandSlotGrid s in slot)
-            {
-                if(s.isBusy == true)
-                {
-                    isBusy++;
-                }
-            }
-
-            if(isBusy < maxResources)
-            {
-                NewResource();
-            }*/
         }
+    }
+
+    public void CraftMode()
+    {
+        StopCoroutine(SpawnResources());
+
+        foreach(IslandSlotGrid s in slot)
+        {
+            if(s.isBusy == false)
+            {
+                s.ShowIcon(true);
+            }
+        }
+    }
+
+    public void GameplayMode()
+    {
+        foreach(IslandSlotGrid s in slot)
+        {
+            s.ShowIcon(false);
+        }
+
+        StartCoroutine(SpawnResources());
     }
 }

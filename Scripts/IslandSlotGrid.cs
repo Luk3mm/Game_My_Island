@@ -7,23 +7,25 @@ public class IslandSlotGrid : MonoBehaviour
     public int line;
     public bool isBusy;
     public Collider2D col;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public SpriteRenderer spriteRender;
 
     public void Busy(bool value)
     {
         isBusy = value;
 
         col.enabled = !isBusy;
+    }
+
+    public void ShowIcon(bool value)
+    {
+        spriteRender.enabled = value;
+    }
+
+    private void OnMouseDown()
+    {
+        if(CoreGame.instance.gameManager.gamestate == GameState.CRAFT && isBusy == false)
+        {
+            CoreGame.instance.gameManager.SetCraftObject(this);
+        }
     }
 }
