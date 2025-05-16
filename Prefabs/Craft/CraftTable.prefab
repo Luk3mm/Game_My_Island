@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3938498512324880362}
   - component: {fileID: 5352447596331186462}
   m_Layer: 0
-  m_Name: Furnace
+  m_Name: CraftTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1939378951, guid: e84d649a0e9902e42a2f07d44d1722f3, type: 3}
+  m_Sprite: {fileID: -1022611724, guid: e84d649a0e9902e42a2f07d44d1722f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

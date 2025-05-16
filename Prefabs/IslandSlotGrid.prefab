@@ -94,6 +94,7 @@ MonoBehaviour:
   line: 0
   isBusy: 0
   col: {fileID: 1683976141636543680}
+  spriteRender: {fileID: 4203422361738526708}
 --- !u!212 &4203422361738526708
 SpriteRenderer:
   m_ObjectHideFlags: 0

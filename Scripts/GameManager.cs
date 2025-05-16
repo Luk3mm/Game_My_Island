@@ -27,20 +27,9 @@ public class GameManager : MonoBehaviour
     public GameObject actionCursor;
     public GameObject objCraft;
 
+    public List<IslandManager> islandManageList = new List<IslandManager>();
 
     private GameObject interactiveObj;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void FixedUpdate()
     {
@@ -154,6 +143,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.CRAFT:
+                
                 break;
         }
     }
@@ -165,6 +155,19 @@ public class GameManager : MonoBehaviour
         return isReady;
     }
 
+    public void StartCraftMode(GameObject obj)
+    {
+        objCraft = obj;
+        ChangeGameState(GameState.CRAFT);
+
+        foreach (IslandManager im in islandManageList)
+        {
+            im.CraftMode();
+        }
+
+        CoreGame.instance.inventory.inventoryPanel.SetActive(false);
+    }
+
     public void SetCraftObject(IslandSlotGrid slot)
     {
         GameObject obj = Instantiate(objCraft);
@@ -173,5 +176,10 @@ public class GameManager : MonoBehaviour
         slot.ShowIcon(false);
 
         ChangeGameState(GameState.GAMEPLAY);
+
+        foreach(IslandManager im in islandManageList)
+        {
+            im.GameplayMode();
+        }
     }
 }

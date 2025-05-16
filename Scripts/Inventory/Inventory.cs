@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public Dictionary<Item, int> inventory = new Dictionary<Item, int>();
-    //public Dictionary<Item, GameObject> inventorySlots = new Dictionary<Item, GameObject>();
 
     public GameObject inventoryPanel;
+    public GameObject[] subPanel;
+    public int idSubPanel;
     public GameObject slotPrefab;
 
     [Header("Item Infos")]
@@ -75,19 +76,6 @@ public class Inventory : MonoBehaviour
                     break;
             }
         }
-        
-        /*int amount = inventory[item];
-        amount -= 1;
-
-        if (amount <= 0)
-        {
-            DeleteItem(item);
-        }
-        else if (amount > 0)
-        {
-            inventory[item] = amount;
-            UpdateInventory();
-        } */
     }
 
     private void UpdateItemIventory(Item item)
@@ -116,6 +104,7 @@ public class Inventory : MonoBehaviour
     public void ShowInventory()
     {
         DisableItemInfo();
+        InventoryTabs(0);
 
         bool isActive = !inventoryPanel.activeSelf;
 
@@ -185,5 +174,15 @@ public class Inventory : MonoBehaviour
     public void DisableItemInfo()
     {
         itemInfoWindow.SetActive(false);
+    }
+
+    public void InventoryTabs(int idTab)
+    {
+        foreach(GameObject t in subPanel)
+        {
+            t.SetActive(false);
+        }
+
+        subPanel[idTab].SetActive(true);
     }
 }
