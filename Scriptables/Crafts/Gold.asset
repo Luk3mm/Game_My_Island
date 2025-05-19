@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4367f4bac2ebe4fbcc4389773052c8, type: 3}
+  m_Name: Gold
+  m_EditorClassIdentifier: 
+  recipe:
+  - item: {fileID: 11400000, guid: ea547dc8754dd47488847c5a5a86b51e, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: 1bb4b3daa85154542bc0dcfcca8d5885, type: 2}
+    amount: 10
+  produce: {fileID: 4452671150613256654, guid: 6787346b937c4514a9452bfa91b7074b, type: 3}
+  amount: 2
+  timeToProduction: 20

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,13 @@ public enum ItemCategory
 public enum GameState
 {
     GAMEPLAY, INVENTORY, CRAFT
+}
+
+[Serializable]
+public struct Recipe
+{
+    public Item item;
+    public int amount;
 }
 
 public class CoreGame : MonoBehaviour

@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && CoreGame.instance.gameManager.gamestate != GameState.CRAFT)
         {
             CoreGame.instance.inventory.ShowInventory();
         }
