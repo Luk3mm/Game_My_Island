@@ -23,18 +23,14 @@ public class Inventory : MonoBehaviour
 
     public RectTransform slotGrid;
 
+    public Button[] craftButtons;
+
     private List<GameObject> inventorySlot = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ShowInventory();    
     }
 
     public void GetItem(Item item, int amount)
@@ -184,5 +180,18 @@ public class Inventory : MonoBehaviour
         }
 
         subPanel[idTab].SetActive(true);
+
+        if(idTab == 1)
+        {
+            CheckRecipes();
+        }
+    }
+
+    private void CheckRecipes()
+    {
+        foreach(Button btn in craftButtons)
+        {
+            btn.GetComponent<CheckRecipeIsReady>().CheckRecipe();
+        }
     }
 }

@@ -25,6 +25,13 @@ public struct Recipe
     public int amount;
 }
 
+[Serializable]
+public struct RecipeReady
+{
+    public Craft recipe;
+    public bool isReady;
+}
+
 public class CoreGame : MonoBehaviour
 {
     public static CoreGame instance;

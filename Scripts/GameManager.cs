@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     public List<IslandManager> islandManageList = new List<IslandManager>();
 
+    public RecipeReady[] recipes;
+
     private GameObject interactiveObj;
 
     private void FixedUpdate()
