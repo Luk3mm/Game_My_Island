@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 102472755}
   - component: {fileID: 102472754}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Panel Button Recipes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3495,10 +3495,10 @@ MonoBehaviour:
   resourceLV1:
   - resource: {fileID: 518248996892617004, guid: 85c3aff8c4c64a742868bf667b9d9f2f, type: 3}
     amount: 5
-  - resource: {fileID: 2741590049235021537, guid: cda7ced80c7291f449c04838a614e70e, type: 3}
+  - resource: {fileID: 5177214731289728198, guid: f0979c29b2e18564dadebbcc63c100fe, type: 3}
     amount: 3
   resourceLv2:
-  - resource: {fileID: 5177214731289728198, guid: f0979c29b2e18564dadebbcc63c100fe, type: 3}
+  - resource: {fileID: 2741590049235021537, guid: cda7ced80c7291f449c04838a614e70e, type: 3}
     amount: 3
   resourceLv3:
   - resource: {fileID: 208562215880397650, guid: a198b094c537e7547a72ad236e64cb83, type: 3}
@@ -18419,6 +18419,7 @@ MonoBehaviour:
   craftButtons:
   - {fileID: 1538776643}
   - {fileID: 1506091509}
+  panelIngredientsRecipe: {fileID: 1605857548}
 --- !u!114 &1121946565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22387,6 +22388,7 @@ GameObject:
   - component: {fileID: 1506091510}
   - component: {fileID: 1506091509}
   - component: {fileID: 1506091512}
+  - component: {fileID: 1506091513}
   m_Layer: 5
   m_Name: ButtonCraftTable
   m_TagString: Untagged
@@ -22522,6 +22524,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1506091509}
   recipe: {fileID: 11400000, guid: 054d7196ce641a7469f08bf15686f4d3, type: 2}
+--- !u!114 &1506091513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506091507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1506091512}
+          m_TargetAssemblyTypeName: CheckRecipeIsReady, Assembly-CSharp
+          m_MethodName: OnCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1506091512}
+          m_TargetAssemblyTypeName: CheckRecipeIsReady, Assembly-CSharp
+          m_MethodName: OnCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1509552456
 GameObject:
   m_ObjectHideFlags: 0
@@ -22874,6 +22921,7 @@ GameObject:
   - component: {fileID: 1538776644}
   - component: {fileID: 1538776643}
   - component: {fileID: 1538776646}
+  - component: {fileID: 1538776647}
   m_Layer: 5
   m_Name: ButtonFurnace
   m_TagString: Untagged
@@ -23009,6 +23057,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1538776643}
   recipe: {fileID: 11400000, guid: 2b5f5fcef4b3b8b4588d0e414ef983b9, type: 2}
+--- !u!114 &1538776647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538776641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1538776646}
+          m_TargetAssemblyTypeName: CheckRecipeIsReady, Assembly-CSharp
+          m_MethodName: OnCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1538776646}
+          m_TargetAssemblyTypeName: CheckRecipeIsReady, Assembly-CSharp
+          m_MethodName: OnCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1549416247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23314,7 +23407,7 @@ GameObject:
   - component: {fileID: 1605857550}
   - component: {fileID: 1605857549}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Panel Recipes Ingredients
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -25,6 +25,8 @@ public class Inventory : MonoBehaviour
 
     public Button[] craftButtons;
 
+    public RectTransform panelIngredientsRecipe;
+
     private List<GameObject> inventorySlot = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -100,6 +102,7 @@ public class Inventory : MonoBehaviour
     public void ShowInventory()
     {
         DisableItemInfo();
+        DisablePanelIngredientsRecipe();
         InventoryTabs(0);
 
         bool isActive = !inventoryPanel.activeSelf;
@@ -193,5 +196,16 @@ public class Inventory : MonoBehaviour
         {
             btn.GetComponent<CheckRecipeIsReady>().CheckRecipe();
         }
+    }
+
+    public void EnablePanelIngredientsRecipe(float posY)
+    {
+        panelIngredientsRecipe.position = new Vector3(panelIngredientsRecipe.position.x, posY, panelIngredientsRecipe.position.z);
+        panelIngredientsRecipe.gameObject.SetActive(true);
+    }
+
+    public void DisablePanelIngredientsRecipe()
+    {
+        panelIngredientsRecipe.gameObject.SetActive(false);
     }
 }
